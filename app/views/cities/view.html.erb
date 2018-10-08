@@ -1,4 +1,4 @@
-<% if not @name.nil? %>
+v<% if not @name.nil? %>
 	<% if $cities.key?(@name) %>
 		<h1><%= @name %></h1>
 		<p> <%= @landmark %> is a landmark in this city. There are <%= @population %> in this city. It's currently <%= @weather %>°F. </p>

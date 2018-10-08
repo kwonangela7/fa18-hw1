@@ -5,12 +5,14 @@ class MainController < ApplicationController
   def index
     # Uncomment and pass a parameter to the get function
     @w = WeatherService.get(params[:city])
-    @name = params[:name]
-   
+    if $cities.key?(:city)
+    	city = City.new name: params[:city], landmark: params[:landmark], population: params[:population]
+    	city.save
+    else
+    	redirect_to '/cities/new'
+    end
+    # @name = params[:name] we don't need this anymore since we use the form
 
-    city = City.new(@w)
-
-    city.save
   end
 
 end

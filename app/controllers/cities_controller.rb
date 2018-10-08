@@ -29,14 +29,6 @@ class CitiesController < ApplicationController
 
 	def actualupdate
 		if $cities.key?(:city)
-			# if :landmark.nil? && not :population.nil? 
-			# 	$cities[params[:city].to_sym].update(population: params[:population])
-			# end
-			# if not :landmark.nil? && :population.nil? 
-			# 	$cities[params[:city].to_sym].update(landmark: params[:landmark])
-			# else
-			# 	$cities[params[:city].to_sym].update(landmark: params[:landmark], population: params[:population])
-			# 	end
 			$cities[params[:city].to_sym].update(landmark: params[:landmark], population: params[:population])
 			redirect_to '/cities/view'
 		else
