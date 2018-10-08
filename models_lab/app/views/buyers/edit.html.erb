@@ -1,0 +1,8 @@
+<h1>Edit a Buyer</h1>
+
+<%= form_with local: true, method: 'post', url: "update" do |form| %>
+  Buyer Name: <%= form.text_field :name %><br>
+  <!-- Add the fields that you need for your schema! -->
+
+  <%= form.submit %>
+<% end %>

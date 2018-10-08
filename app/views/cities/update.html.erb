@@ -1,0 +1,10 @@
+<%= form_with local:true, method: 'post', url: 'actualupdate' do |form| %>
+	Update a city's information!  <br>
+	City Name
+	<%= form.text_field :city, :required => true %> <br>
+	City Landmark
+	<%= form.text_field :landmark, :required => true %> <br>
+	City Population
+	<%= form.number_field :population, :required => true %> <br>
+	<%= form.submit %>
+<% end %>

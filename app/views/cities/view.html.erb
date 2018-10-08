@@ -1,0 +1,16 @@
+<% if not @name.nil? %>
+	<% if $cities.key?(@name) %>
+		<h1><%= @name %></h1>
+		<p> <%= @landmark %> is a landmark in this city. There are <%= @population %> in this city. It's currently <%= @weather %>°F. </p>
+	<% end %>
+
+	<% if not $cities.key?(@name) %>
+		<p> There is no city with that name! Please go to localhost:1337/cities/new to create a new city! </p>
+	<% end %>
+
+<% else %>
+	<%= $cities.values.each do |city| %>
+		<h1><%= city.name %></h1>
+		<p> <%= city.landmark %> is a landmark in this city. There are <%= city.population %> in this city. It's currently <%= WeatherService.get(city.name) %>°F. </p>
+	<% end %>
+<% end %>

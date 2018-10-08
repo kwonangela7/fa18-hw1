@@ -1,0 +1,12 @@
+<h1>List of purchases!</h1>
+
+<% if @purchases %>
+  <% @purchases.each do |purchase| %>
+    <p>----------</p><br>
+
+    <h2>Purchase Product: <%= purchase.product.name %></h2><br>
+    <!-- Add more fields based on your schema! -->
+
+    <p>----------</p><br>
+  <% end %>
+<% end %>

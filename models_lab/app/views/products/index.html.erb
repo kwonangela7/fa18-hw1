@@ -1,0 +1,13 @@
+<h1>Welcome to our marketplace!</h1>
+See our products below or create something new :)
+
+<% if @products %>
+  <% @products.each do |product| %>
+    <p>----------</p><br>
+
+    <h2>Product Name: <%= product.name %></h2><br>
+    <!-- Add more fields based on your schema! -->
+
+    <p>----------</p><br>
+  <% end %>
+<% end %>

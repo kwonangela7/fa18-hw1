@@ -1,0 +1,8 @@
+<h1> Create a New Seller</h1>
+
+<%= form_with local: true, method: 'post', url: "create" do |form| %>
+  Seller Name: <%= form.text_field :name %><br>
+  <!-- Add the fields that you need for your schema! -->
+
+  <%= form.submit %>
+<% end %>

@@ -1,0 +1,12 @@
+<%= form_with local:true, method: 'post', url: 'create' do |form| %>
+	Create a city! <br>
+	City Name
+	<%= form.text_field :city, :required => true %> <br>
+	City Landmark
+	<%= form.text_field :landmark, :required => true %> <br>
+	City Population
+	<%= form.number_field :population, :required => true %> <br>
+	City Weather
+	<%= form.text_field :weather, :required => true%> <br>
+	<%= form.submit %>
+<% end %>
